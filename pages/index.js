@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
+import CryptoList from '../components/CryptoList'
+import SingleCrypto from '../components/SingleCrypto'
 
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Hero/>
+      <CryptoList/>
+      <SingleCrypto/>
       <main></main>
     </div>
   )
