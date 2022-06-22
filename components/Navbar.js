@@ -43,7 +43,7 @@ const Navbar = () => {
                 </button>
                 <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
                   {" "}
-                  Contact
+                  Contact Us
                 </button>
               </ul>
             </div>
