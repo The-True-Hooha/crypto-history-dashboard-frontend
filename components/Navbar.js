@@ -8,7 +8,7 @@ const Navbar = () => {
         <header className='bg-green-800 fixed top-6 w-full z-30 bg-white-500 transition-all'>
             <nav className='max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4'>
                 <div className='col-start-1 col-end-2 flex items-center'>
-                    <h2 className='text-white font-bold text-xl'> Crypto History Dashboard </h2>
+                    <h1 className='text-white font-bold text-xl'> Crypto History Dashboard </h1>
                 </div>
                 <ul className='hidden lg:flex col-start-2 col-end-8 items-center'>
                     <button className='px-6 text-white py-2 font-bold mx-4 cursor-pointer animation-hover inline-block relative font-mono'> Testimonials</button>
