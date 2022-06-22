@@ -1,28 +1,57 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 import Logo from "../public/assets/Logo.svg";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const Navbar = () => {
-    
-    return(
-        <header className='bg-green-800 fixed top-6 w-full z-30 bg-white-500 transition-all'>
-            <nav className='max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4'>
-                <div className='col-start-1 col-end-2 flex items-center'>
-                    <h1 className='text-white font-bold text-xl'> Crypto History Dashboard </h1>
-                </div>
-                <ul className='hidden lg:flex col-start-2 col-end-8 items-center'>
-                    <button className='px-6 text-white py-2 font-bold mx-4 cursor-pointer animation-hover inline-block relative font-mono'> Testimonials</button>
-                    <button className='px-6 py-2 text-white font-bold mx-4 cursor-pointer animation-hover inline-block relative font-mono'> Feature</button>
-                    <button className='px-6 py-2 text-white font-bold mx-4 cursor-pointer animation-hover inline-block relative font-mono'> Pricing</button>
-                    <button className='px-6 py-2 text-white font-bold mx-4 cursor-pointer animation-hover inline-block relative font-mono'> About</button>
-                </ul>
-                <div className='col-start-10 col-end-12 font-medium flex justify-end items-center'>
-                    <button className='text-white mx-2 sm:mx-4 uppercase font-bold tracking-wide'> Buy Crypto </button>
-                    <button className='text-white mx-2 sm:mx-4 uppercase font-bold tracking-wide'> Wallets </button>
-                </div>
-            </nav>
-        </header>
-    );
+  return (
+    <Disclosure as="nav" className="bg-green-500">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-16">
+          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div className="flex-shrink-0 col-start-1 col-end-2 flex items-center">
+              <h1 className="text-black font-bold text-xl hidden lg:block h-8 w-auto">
+                Crypto History
+              </h1>
+              <ul className="hidden lg:flex col-start-4 col-end-8 items-center">
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                  Testimonials
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                  Features
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                  Pricing
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                  About
+                </button>
+                <button className="px-6 text-black py-2 font-bold mx-8 cursor-pointer inline-block relative font-mono">
+                  {" "}
+                  Contact Us
+                </button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Disclosure>
+  );
 };
 
 export default Navbar;
