@@ -9,7 +9,9 @@ const CryptoList = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const response = await axios.get("http://localhost:8080/api/v1/crypto-dashboard/get-coins");
+      const response = await axios.get(
+        "http://localhost:8080/api/v1/crypto-dashboard/get-coins"
+      );
       setCrypto(response.data);
       setLoading(false);
     };
@@ -17,7 +19,8 @@ const CryptoList = () => {
   }, []);
 
   return (
-      <section className="antialiased  text-gray-600 h-screen px-4">
+    <div>
+      <section className="antialiased  text-gray-600 min-h-[300px] px-4">
         <div className="flex flex-col mt-4 h-full">
           <div className="w-full max-w-7xl mx-auto bg-green-500 shadow-lg rounded-sm border border-gray-200">
             <header className="px-5 py-4 border-b border-gray-100">
@@ -49,7 +52,7 @@ const CryptoList = () => {
                   </thead>
                   <tbody className="text-sm divide-y divide-gray-100">
                     {crypto?.map((coin) => (
-                        <SingleCryptoList coin={coin} key={coin.uuid} />
+                      <SingleCryptoList coin={coin} key={coin.uuid} />
                     ))}
                   </tbody>
                 </table>
@@ -58,6 +61,7 @@ const CryptoList = () => {
           </div>
         </div>
       </section>
+    </div>
   );
 };
 
