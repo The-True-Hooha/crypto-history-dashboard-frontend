@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import CryptoList from '../components/CryptoList'
+import Subscribe from '../components/Subscribe';
+import Footer from '../components/Footer';
 
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
       <main>
       <CryptoList/>
       </main>
+      <Subscribe/>
+      <Footer/>
     </div>
   );
 }
